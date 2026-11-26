@@ -8,7 +8,7 @@ Sistema web full stack para uma locadora: usuários autenticados cadastram e con
 
 | Nome | Matrícula |
 |---|---|
-| HENNAN HEIM FALCÃO 
+| HENNAN HEIM FALCÃO | 39699927 |
 
 ## ✨ Funcionalidades
 
