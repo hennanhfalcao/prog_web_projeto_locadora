@@ -1,4 +1,3 @@
--- CreateTable
 CREATE TABLE `Usuario` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `nome` VARCHAR(100) NOT NULL,
@@ -10,7 +9,6 @@ CREATE TABLE `Usuario` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- CreateTable
 CREATE TABLE `Veiculo` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `marca` VARCHAR(50) NOT NULL,
@@ -25,7 +23,6 @@ CREATE TABLE `Veiculo` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- CreateTable
 CREATE TABLE `Locacao` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `usuarioId` INTEGER NOT NULL,
@@ -42,8 +39,6 @@ CREATE TABLE `Locacao` (
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
--- AddForeignKey
 ALTER TABLE `Locacao` ADD CONSTRAINT `Locacao_usuarioId_fkey` FOREIGN KEY (`usuarioId`) REFERENCES `Usuario`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
 
--- AddForeignKey
 ALTER TABLE `Locacao` ADD CONSTRAINT `Locacao_veiculoId_fkey` FOREIGN KEY (`veiculoId`) REFERENCES `Veiculo`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
