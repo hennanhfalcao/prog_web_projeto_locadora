@@ -21,6 +21,8 @@ function Menu(){
             <nav>
                 <NavLink to="/veiculos" end>Veículos</NavLink>
                 <NavLink to="/veiculos/cadastrar">Cadastrar veículo</NavLink>
+                <NavLink to="/locacoes/nova">Nova locação</NavLink>
+                <NavLink to="/locacoes" end>Minhas locações</NavLink>
             </nav>
             <div className="menu-usuario">
                 <span>{usuario ? `Olá, ${usuario.nome}` : ""}</span>

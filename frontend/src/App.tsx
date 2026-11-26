@@ -6,6 +6,8 @@ import Login from "./pages/Login";
 import Cadastro from "./pages/Cadastro";
 import ListarVeiculos from "./pages/ListarVeiculos";
 import CadastrarVeiculo from "./pages/CadastrarVeiculo";
+import NovaLocacao from "./pages/NovaLocacao";
+import MinhasLocacoes from "./pages/MinhasLocacoes";
 
 const App = () =>{
   return(
@@ -18,6 +20,8 @@ const App = () =>{
       <Route element={<PrivateRoute />}>
         <Route path="/veiculos" element={<ListarVeiculos />}/>
         <Route path="/veiculos/cadastrar" element={<CadastrarVeiculo />}/>
+        <Route path="/locacoes" element={<MinhasLocacoes />}/>
+        <Route path="/locacoes/nova" element={<NovaLocacao />}/>
       </Route>
       <Route path="*" element={<Navigate to="/veiculos" replace/>}/>
     </Routes>
